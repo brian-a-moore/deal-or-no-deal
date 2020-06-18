@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Exo', sans-serif;
+    font-size: 12px;
+}
+
+body {
+    background: gray;
+}
+
+#app, #splash {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    padding: 50px 0 0 0;
+}
+
+#splash {
+    background: #37474F;
+    background-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    box-shadow: inset 0 0 100px black;
+}
+
+#splash h1 {
+    background: black;
+    width: 100%;
+    max-width: 400px;
+    height: 100px;
+    line-height: 100px;
+    margin: 0;
+    padding: 0 20px;
+    color: #FFEB3B;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+#splash span {
+    color: white;
+    text-shadow: 0 2px 1px black;
+    font-size: 18px;
+    padding: 10px 0;
+}
+
+.message {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    color: white;
+    transition: all 0.2s ease;
+    z-index: 3;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.message div {
+    display: inline;
+}
+
+.message div button {
+    margin: 0 0 0 10px;
+}
+
+.message.neutral { background:#455962; }
+.message.offer {
+    background: #FFEB3B;
+    color: black;
+    box-shadow: 0 0 10px #FFEB3B;
+}
+.message.good { background: #43A047; box-shadow: 0 0 10px #43A047}
+.message.bad { background: #f44336; box-shadow: 0 0 10px #f44336}
+
+.cases {
+    background: #263238;
+    float: left;
+    width: calc(100% - 300px);
+    height: calc(100% - 200px);
+    box-shadow: inset 0 0 30px rgba(0,0,0.3);
+    overflow: hidden;
+}
+
+.cases .case-container {
+    float: left;
+    width: calc(100% / 6);
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cases .case-container .case {
+    background:#C3D5E6;
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0; padding: 0;
+    border-radius: 5px;
+    font-size: 30px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.3);
+    opacity: 0.1;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.cases .case-container .case.available, .cases .case-container .case.available:disabled {
+    opacity: 1;
+    outline: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+.cases .case-container .case.available:disabled {
+    cursor: default;
+}
+
+.cases .case-container .case.available:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.panel {
+    background: #455A64;
+    float: left;
+    width: calc(100% - 300px);
+    height: 200px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+}
+
+.right {
+    background: #37474F;
+    float: right;
+    width: 300px;
+    height: 100%;
+}
+
+.remaining-amounts {
+    float: left;
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+
+.remaining-amounts .col {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+}
+
+.remaining-amounts .col .block-container {
+    float: left;
+    width: 100%;
+    height: calc(100% / 13); 
+    padding: 5px;
+    display: flex;
+}
+
+.remaining-amounts .col.left .block-container {
+    padding-right: 2.5px;
+}
+
+.remaining-amounts .col.right .block-container {
+    padding-left: 2.5px;
+}
+
+.remaining-amounts .block {
+    background: #FFEB3B;
+    float: left;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    transition: all 0.2s ease;
+}
+
+.remaining-amounts .block.available {
+    opacity: 1;
+    box-shadow: 0 0 5px #FFEB3B, inset 0 0 1px black;
+}
+
+.remaining-amounts .block span {
+    width: 100%;
+    text-align: right;
+}
+
+.old-offers {
+    float: left;
+    width: 100%;
+    height: 30%;
+    padding: 0 10px 10px 10px;
+}
+
+.old-offers h1 {
+    float: left;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    font-weight: bold;
+    color: #FFEB3B;
+}
+
+.old-offers .offers {
+    background: rgba(0,0,0,0.3);
+    float: left;
+    width: 100%;
+    height: calc(100% - 40px);
+}
+
+.old-offers .offers span {
+    float: left;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #ECEFF1;
+    padding: 0 10px;
+}
