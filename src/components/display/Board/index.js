@@ -1,4 +1,4 @@
-import { toDollar } from '../../utils/helpers';
+import { toDollar } from '../../../utils/helpers';
 import { Wrapper } from './style';
 
 function Board({ cases, playerCaseId }) {

@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { Actions } from '../../components/display';
+import { Link } from '../../components/interactive';
 import { Wrapper } from './style';
 
 function NotFound() {
@@ -9,7 +10,9 @@ function NotFound() {
                 But there's nothing to see here, let's get back somewhere
                 safe...
             </p>
-            <Link to="/">Back to Safety</Link>
+            <Actions>
+                <Link to="/">Back to Safety</Link>
+            </Actions>
         </Wrapper>
     );
 }

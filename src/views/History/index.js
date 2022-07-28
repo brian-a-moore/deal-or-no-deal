@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { Actions } from '../../components/display';
+import { Button, Link } from '../../components/interactive';
 import {
     clearRecord,
     getName,
@@ -84,11 +86,11 @@ function History() {
                     </tr>
                 </tbody>
             </table>
-            <div className="actions">
-                <button onClick={_clearRecord}>Clear Record</button>
-                <button onClick={resetEverything}>Clear All Data</button>
+            <Actions>
+                <Button onClick={_clearRecord}>Clear Record</Button>
+                <Button onClick={resetEverything}>Clear All Data</Button>
                 <Link to="/">Go Back</Link>
-            </div>
+            </Actions>
         </Wrapper>
     );
 }

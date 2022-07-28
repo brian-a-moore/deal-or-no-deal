@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Roboto&family=Righteous&display=swap');
+
+:root {
+    --theme: #fdd835;
+    --focus: #fdd83550;
+}
+
 *,
 ::before,
 ::after {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
@@ -14,91 +21,14 @@ body {
     color: #fff;
 }
 
-a,
-p,
-li,
-td,
-button {
-    font-size: 1rem;
-}
-
-p {
-    margin: 0 0 2rem 0;
-    padding: 0;
-}
-
-a {
-    color: gold;
-    float: left;
-    outline: 1px solid gold;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0 0 2rem 0;
-    padding: 0 2rem;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
-
-button {
-    background: transparent;
-    color: gold;
-    float: left;
-    border: none;
-    outline: 1px solid gold;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0 0 2rem 0;
-    padding: 0 2rem;
-    transition: all 0.25s ease;
-    cursor: pointer;
-}
-
-a:hover,
-button:hover {
-    background: gold;
-    color: black;
-    outline-offset: 4px;
-}
-
-a:active,
-button:active {
-    outline-color: #ffd70050;
-    outline-offset: 8px;
-}
-
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    color: gold;
-    margin: 0 0 2rem 0;
+    color: var(--theme);
+    font-family: 'Righteous', Arial, Helvetica, sans-serif;
+    margin: 0;
     padding: 0;
-}
-
-input {
-    background-color: transparent;
-    height: 2rem;
-    line-height: 2rem;
-    margin: 0 0 2rem 0;
-    padding: 0 1rem;
-    border: none;
-    outline: 1px solid gold;
-    color: inherit;
-    font-size: inherit;
-    transition: all 0.25s ease;
-}
-
-input:focus {
-    background: #ffd70050;
-    outline-offset: 4px;
-}
-
-.actions a + a,
-.actions button + button,
-.actions a + button,
-.actions button + a {
-    margin-left: 2rem;
 }

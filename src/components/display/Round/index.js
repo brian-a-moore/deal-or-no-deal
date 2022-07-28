@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { STATUS, ROUNDS } from '../../utils/constants';
+import { STATUS, ROUNDS } from '../../../utils/constants';
 import {
     getRoundTone,
     markCaseUnavailable,
     toDollar
-} from '../../utils/helpers';
+} from '../../../utils/helpers';
 import { Wrapper } from './style';
 
 function Round({ game, updateStatus, updateGame }) {

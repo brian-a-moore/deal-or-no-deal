@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { createRange, getRandomIndex, toDollar } from '../../utils/helpers';
+import { createRange, getRandomIndex, toDollar } from '../../../utils/helpers';
 import { Wrapper } from './style';
 
 const TIMES = createRange(1000, 5000, 500);

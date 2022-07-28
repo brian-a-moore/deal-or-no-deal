@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { DIALOGS, STATUS, ROUNDS } from '../../utils/constants';
-import { getName } from '../../utils/api';
-import { convertToNth } from '../../utils/helpers';
+import { DIALOGS, STATUS, ROUNDS } from '../../../utils/constants';
+import { getName } from '../../../utils/api';
+import { convertToNth } from '../../../utils/helpers';
 import { Wrapper } from './style';
 
 function Dialog({ status, nextStatus, game, updateStatus }) {
@@ -77,7 +77,7 @@ function Dialog({ status, nextStatus, game, updateStatus }) {
                     <button onClick={onContinue}>Continue</button>
                 </div>
             </div>
-            <img src={require('../../img/howie.png')} alt="Howie Mandel" />
+            <img src={require('../../../img/howie.png')} alt="Howie Mandel" />
         </Wrapper>
     );
 }

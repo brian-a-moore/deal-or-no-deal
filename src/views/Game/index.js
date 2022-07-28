@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import {
     Dialog,
     Board,
@@ -8,7 +7,8 @@ import {
     PickCase,
     Result,
     Round
-} from '../../components';
+} from '../../components/display';
+import { Link } from '../../components/interactive';
 import { CASES, STATUS } from '../../utils/constants';
 import { GAME_FIXTURE } from '../../utils/fixtures';
 // import { EXAMPLE_STATE } from '../../utils/exmaple';

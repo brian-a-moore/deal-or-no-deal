@@ -1,5 +1,5 @@
-import { getName } from '../../utils/api';
-import { getCaseDisplayNumber } from '../../utils/helpers';
+import { getName } from '../../../utils/api';
+import { getCaseDisplayNumber } from '../../../utils/helpers';
 import { Wrapper } from './style';
 
 function FinalRound({ game, finalChoice }) {

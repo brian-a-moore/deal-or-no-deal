@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Actions } from '../../components/display';
+import { TextInput } from '../../components/form';
+import { Button, Link } from '../../components/interactive';
 import { getName, setName } from '../../utils/api';
 import { Wrapper } from './style';
 
@@ -28,25 +30,25 @@ function Splash() {
             {firstName ? (
                 <>
                     <p className="dialog">Welcome back, {firstName}!</p>
-                    <div className="actions">
+                    <Actions>
                         <Link to="/game">New Game</Link>
                         <Link to="/history">History</Link>
-                    </div>
+                    </Actions>
                 </>
             ) : (
                 <>
                     <p className="dialog">
                         Before we get started, what's your first name?
                     </p>
-                    <input
+                    <TextInput
                         name="inputName"
                         placeholder="Enter your first name..."
                         onChange={onChange}
                         value={inputName}
                     />
-                    <div className="actions">
-                        <button onClick={updateName}>Add Name</button>
-                    </div>
+                    <Actions>
+                        <Button onClick={updateName}>Add Name</Button>
+                    </Actions>
                 </>
             )}
         </Wrapper>

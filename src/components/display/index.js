@@ -1,3 +1,4 @@
+import Actions from './Actions';
 import Dialog from './Dialog';
 import Board from './Board';
 import FinalRound from './FinalRound';
@@ -6,4 +7,4 @@ import PickCase from './PickCase';
 import Result from './Result';
 import Round from './Round';
 
-export { Dialog, Board, FinalRound, Offer, PickCase, Result, Round };
+export { Actions, Dialog, Board, FinalRound, Offer, PickCase, Result, Round };
