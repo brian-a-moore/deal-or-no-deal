@@ -153,7 +153,9 @@ function Game() {
                     </div>
                 </>
             )}
-            <Link to="/">Quit Game</Link>
+            <footer>
+                <Link to="/">Quit Game</Link>
+            </footer>
         </Wrapper>
     );
 }

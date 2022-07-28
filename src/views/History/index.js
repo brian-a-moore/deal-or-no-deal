@@ -38,12 +38,7 @@ function History() {
     if (isLoading) return <div> Loading... </div>;
     return (
         <Wrapper>
-            <h1>Game History</h1>
-            <p>
-                Here to check out your awesome skills, {firstName}? Well...
-                here's how you've been playing!
-            </p>
-            <h2>Player Record</h2>
+            <h1>History</h1>
             <table>
                 <tbody>
                     <tr>
@@ -89,9 +84,9 @@ function History() {
                     </tr>
                 </tbody>
             </table>
-            <div>
+            <div className="actions">
                 <button onClick={_clearRecord}>Clear Record</button>
-                <button onClick={resetEverything}>Reset Everything</button>
+                <button onClick={resetEverything}>Clear All Data</button>
                 <Link to="/">Go Back</Link>
             </div>
         </Wrapper>

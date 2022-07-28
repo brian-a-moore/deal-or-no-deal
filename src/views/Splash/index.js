@@ -16,10 +16,6 @@ function Splash() {
         setInputName(e.target.value);
     };
 
-    const onClear = () => {
-        setInputName('');
-    };
-
     const updateName = () => {
         setName(inputName);
         setFirstName(inputName);
@@ -29,24 +25,28 @@ function Splash() {
     return (
         <Wrapper>
             <h1>Deal or No Deal</h1>
-            <p> Created By: Brian Moore</p>
             {firstName ? (
                 <>
-                    <p>Welcome back, {firstName}!</p>
-                    <Link to="/game">Start Game</Link>
-                    <Link to="/history">Game History</Link>
+                    <p className="dialog">Welcome back, {firstName}!</p>
+                    <div className="actions">
+                        <Link to="/game">New Game</Link>
+                        <Link to="/history">History</Link>
+                    </div>
                 </>
             ) : (
                 <>
-                    <p>Before we get started, what's your first name?</p>
+                    <p className="dialog">
+                        Before we get started, what's your first name?
+                    </p>
                     <input
                         name="inputName"
                         placeholder="Enter your first name..."
                         onChange={onChange}
                         value={inputName}
                     />
-                    <button onClick={updateName}>Add Name</button>
-                    <button onClick={onClear}>Clear</button>
+                    <div className="actions">
+                        <button onClick={updateName}>Add Name</button>
+                    </div>
                 </>
             )}
         </Wrapper>

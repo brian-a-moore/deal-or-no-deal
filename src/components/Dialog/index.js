@@ -71,8 +71,13 @@ function Dialog({ status, nextStatus, game, updateStatus }) {
     if (!message) return;
     return (
         <Wrapper>
-            <p>{message}</p>
-            <button onClick={onContinue}>Continue</button>
+            <div className="message">
+                <p>{message}</p>
+                <div className="actions">
+                    <button onClick={onContinue}>Continue</button>
+                </div>
+            </div>
+            <img src={require('../../img/howie.png')} alt="Howie Mandel" />
         </Wrapper>
     );
 }

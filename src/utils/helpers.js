@@ -96,7 +96,11 @@ export const makeOffer = (cases, playerCaseId) => {
 };
 
 export const toDollar = n => {
+    if (!n) return null;
     return n < 1 ? `$${n}` : numeral(n).format('$0,0');
 };
 
-export const toPct = n => numeral(n).format('%');
+export const toPct = n => {
+    if (!n) return '0%';
+    numeral(n).format('%');
+};
