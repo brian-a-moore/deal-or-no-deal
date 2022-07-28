@@ -26,9 +26,9 @@ export const Wrapper = styled.div`
 
     p {
         color: black;
-        font-size: 1.2rem;
-        font-family: 'Patrick Hand', Arial, Helvetica, sans-serif;
-        margin: 0 0 1rem 0;
+        font-size: 1.5rem;
+        font-family: 'Edu SA Beginner', Arial, Helvetica, sans-serif;
+        margin: 0 0 2rem 0;
         padding: 0;
     }
 `;

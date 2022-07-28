@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Montserrat&family=Patrick+Hand&family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Edu+SA+Beginner&family=Montserrat&family=Righteous&display=swap');
 
 :root {
     --theme: #fdd835;
@@ -27,8 +27,6 @@ h3,
 h4,
 h5,
 h6 {
-    color: var(--theme);
-    font-family: 'Righteous', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
 }

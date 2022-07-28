@@ -1,7 +1,7 @@
 import { Wrapper } from './style';
 
-function Button({ children, onClick }) {
-    return <Wrapper onClick={onClick}>{children}</Wrapper>;
+function Button({ children, ...rest }) {
+    return <Wrapper {...rest}>{children}</Wrapper>;
 }
 
 export default Button;

@@ -3,9 +3,9 @@ import styled from 'styled-components';
 export const Wrapper = styled.button`
     float: left;
     background: transparent;
-    color: var(--theme);
+    color: ${({ alt }) => (alt ? 'black' : 'var(--theme)')};
     border: none;
-    outline: 1px solid var(--theme);
+    outline: 1px solid ${({ alt }) => (alt ? 'black' : 'var(--theme)')};
     height: 2rem;
     line-height: 2rem;
     margin: 0;
@@ -16,16 +16,23 @@ export const Wrapper = styled.button`
     text-transform: uppercase;
     transition: all 0.25s ease;
     user-select: none;
-    cursor: pointer;
 
-    &:hover {
-        background: var(--theme);
-        color: black;
+    &:enabled {
+        cursor: pointer;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+
+    &:enabled:hover {
+        background: ${({ alt }) => (alt ? 'black' : 'var(--theme)')};
+        color: ${({ alt }) => (alt ? 'white' : 'black')};
         outline-offset: 4px;
     }
 
-    &:active {
-        outline-color: #ffd70050;
+    &:enabled:active {
+        outline-color: ${({ alt }) => (alt ? 'rgba(0,0,0,0.3)' : '#ffd70050')};
         outline-offset: 8px;
     }
 `;

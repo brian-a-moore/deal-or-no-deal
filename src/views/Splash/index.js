@@ -26,28 +26,31 @@ function Splash() {
 
     return (
         <Wrapper>
-            <h1>Deal or No Deal</h1>
+            {firstName && (
+                <div className="player">
+                    <h1>Player Name</h1>
+                    <p>{firstName}</p>
+                </div>
+            )}
+            <img src={require('../../img/logo.png')} alt="Deal or No Deal" />
             {firstName ? (
-                <>
-                    <p className="dialog">Welcome back, {firstName}!</p>
-                    <Actions>
-                        <Link to="/game">New Game</Link>
-                        <Link to="/history">History</Link>
-                    </Actions>
-                </>
+                <Actions>
+                    <Link to="/game">New Game</Link>
+                    <Link to="/history">History</Link>
+                </Actions>
             ) : (
                 <>
-                    <p className="dialog">
-                        Before we get started, what's your first name?
-                    </p>
                     <TextInput
                         name="inputName"
                         placeholder="Enter your first name..."
                         onChange={onChange}
                         value={inputName}
+                        style={{ marginBottom: '2rem' }}
                     />
                     <Actions>
-                        <Button onClick={updateName}>Add Name</Button>
+                        <Button onClick={updateName} disabled={!inputName}>
+                            Add Name
+                        </Button>
                     </Actions>
                 </>
             )}

@@ -4,6 +4,7 @@ import { getName } from '../../../utils/api';
 import { convertToNth } from '../../../utils/helpers';
 import Bubble from '../Bubble';
 import { Wrapper } from './style';
+import Button from '../../interactive/Button';
 
 function Dialog({ status, nextStatus, game, updateStatus }) {
     const { cases, playerCaseId, currentRound, roundTone } = game;
@@ -75,7 +76,9 @@ function Dialog({ status, nextStatus, game, updateStatus }) {
             <Bubble>
                 <p>{message}</p>
                 <div className="actions">
-                    <button onClick={onContinue}>Continue</button>
+                    <Button alt onClick={onContinue}>
+                        Continue
+                    </Button>
                 </div>
             </Bubble>
             <img src={require('../../../img/howie.png')} alt="Howie Mandel" />
