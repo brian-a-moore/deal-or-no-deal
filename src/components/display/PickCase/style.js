@@ -20,7 +20,6 @@ export const Wrapper = styled.section`
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-gap: 1rem;
         padding: 1rem;
-        overflow: auto;
 
         .grid-item {
             display: flex;

@@ -6,7 +6,7 @@ export const Wrapper = styled.button`
     background-size: 100% 100%;
     width: 6rem;
     height: 4.5rem;
-    line-height: 5rem;
+    line-height: 5.3rem;
     margin: 1rem;
     padding: 0;
     border: none;
@@ -18,5 +18,6 @@ export const Wrapper = styled.button`
 
     &:hover {
         transform: scale(1.2);
+        filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
     }
 `;
