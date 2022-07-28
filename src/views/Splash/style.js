@@ -11,8 +11,9 @@ export const Wrapper = styled.section`
     justify-content: center;
 
     img {
-        height: 50%;
-        max-height: 20rem;
+        width: 100%;
+        max-width: 40rem;
+        margin-bottom: 2rem;
     }
 
     .player {
