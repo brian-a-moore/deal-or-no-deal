@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { DIALOGS, STATUS, ROUNDS } from '../../../utils/constants';
 import { getName } from '../../../utils/api';
 import { convertToNth } from '../../../utils/helpers';
+import Bubble from '../Bubble';
 import { Wrapper } from './style';
 
 function Dialog({ status, nextStatus, game, updateStatus }) {
@@ -71,12 +72,12 @@ function Dialog({ status, nextStatus, game, updateStatus }) {
     if (!message) return;
     return (
         <Wrapper>
-            <div className="message">
+            <Bubble>
                 <p>{message}</p>
                 <div className="actions">
                     <button onClick={onContinue}>Continue</button>
                 </div>
-            </div>
+            </Bubble>
             <img src={require('../../../img/howie.png')} alt="Howie Mandel" />
         </Wrapper>
     );
