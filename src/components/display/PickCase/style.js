@@ -1,37 +1,31 @@
 import styled from 'styled-components';
+import Image from '../../../img/pick-case.png';
 
 export const Wrapper = styled.section`
-    background-color: black;
+    background: url(${Image}) no-repeat;
+    background-size: cover;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-    .case-grid {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .case-grid .grid-item {
-        width: calc(100% / 6);
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1rem;
         padding: 1rem;
-        aspect-ratio: 16/9;
-    }
+        overflow: auto;
 
-    .case-grid .grid-item p {
-        background: gray;
-        float: left;
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        border-radius: 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: black;
-        font-size: 3rem;
-        font-weight: bold;
-        cursor: pointer;
+        .grid-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 `;

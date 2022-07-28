@@ -1,5 +1,6 @@
 import Actions from './Actions';
 import Board from './Board';
+import Briefcase from './Briefcase';
 import Bubble from './Bubble';
 import Dialog from './Dialog';
 import FinalRound from './FinalRound';
@@ -11,6 +12,7 @@ import Round from './Round';
 export {
     Actions,
     Board,
+    Briefcase,
     Bubble,
     Dialog,
     FinalRound,

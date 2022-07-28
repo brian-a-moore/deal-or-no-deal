@@ -1,15 +1,22 @@
 import { Wrapper } from './style';
+import Briefcase from '../Briefcase';
+import Bubble from '../Bubble';
 
 function PickCase({ cases, setPlayerCaseId }) {
     return (
         <Wrapper>
-            <p>Pick Case</p>
-            <div className="case-grid">
+            <Bubble>
+                <p style={{ margin: 0 }}>Select your case...</p>
+            </Bubble>
+            <div className="grid">
                 {cases.map(({ caseId, displayNumber }) => (
-                    <div key={caseId} className="grid-item">
-                        <p onClick={() => setPlayerCaseId(caseId)}>
+                    <div className="grid-item">
+                        <Briefcase
+                            key={caseId}
+                            onClick={() => setPlayerCaseId(caseId)}
+                        >
                             {displayNumber}
-                        </p>
+                        </Briefcase>
                     </div>
                 ))}
             </div>
